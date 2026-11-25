@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="estilos.css">
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <section class="portafolio">
+
+        <!-- Categorías -->
+        <div class="categorias">
+
+            <button class="filtro activo" data-categoria="todos">TODOS 6</button>
+            <button class="filtro" data-categoria="branding">BRANDING 1</button>
+            <button class="filtro" data-categoria="cartel">CARTEL 1</button>
+            <button class="filtro" data-categoria="packaging">PACKAGING 1</button>
+            <button class="filtro" data-categoria="editorial">EDITORIAL 1</button>
+            <button class="filtro" data-categoria="digital">DIGITAL 1</button>
+            <button class="filtro" data-categoria="ilustracion">ILUSTRACIÓN 1</button>
+
+        </div>
+
+        <!-- Proyectos -->
+        <div class="proyectos">
+
+            <!-- Branding -->
+            <div class="proyecto" data-categoria="branding">
+                <div class="imagen">
+                    <img src="branding.jpg" alt="Proyecto de branding">
+                    <span class="etiqueta">BRANDING</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>01</span>
+                        <h2>IDENTIDAD VISUAL</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            <!-- Cartel -->
+            <div class="proyecto" data-categoria="cartel">
+                <div class="imagen">
+                    <img src="cartel.jpg" alt="Proyecto de cartel">
+                    <span class="etiqueta">CARTEL</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>02</span>
+                        <h2>CARTEL CULTURAL</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            <!-- Packaging -->
+            <div class="proyecto" data-categoria="packaging">
+                <div class="imagen">
+                    <img src="packaging.jpg" alt="Proyecto de packaging">
+                    <span class="etiqueta">PACKAGING</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>03</span>
+                        <h2>PACKAGING</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            <!-- Editorial -->
+            <div class="proyecto" data-categoria="editorial">
+                <div class="imagen">
+                    <img src="editorial.jpg" alt="Proyecto editorial">
+                    <span class="etiqueta">EDITORIAL</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>04</span>
+                        <h2>THE NEXT CHAPTER</h2>
+                    </div>
+                    <span class="anio">2024</span>
+                </div>
+            </div>
+
+            <!-- Digital -->
+            <div class="proyecto" data-categoria="digital">
+                <div class="imagen">
+                    <img src="digital.jpg" alt="Proyecto digital">
+                    <span class="etiqueta">DIGITAL</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>05</span>
+                        <h2>MINDFULME</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            <!-- Ilustración -->
+            <div class="proyecto" data-categoria="ilustracion">
+                <div class="imagen">
+                    <img src="ilustracion.jpg" alt="Proyecto de ilustración">
+                    <span class="etiqueta">ILUSTRACIÓN</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>06</span>
+                        <h2>CREATIVE ART</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Filtro de categorías -->
+    <script>
+        const botones = document.querySelectorAll(".filtro");
+        const proyectos = document.querySelectorAll(".proyecto");
+
+        botones.forEach(boton => {
+            boton.addEventListener("click", function() {
+
+                botones.forEach(b => b.classList.remove("activo"));
+                this.classList.add("activo");
+
+                const categoria = this.dataset.categoria;
+
+                proyectos.forEach(proyecto => {
+
+                    if (categoria === "todos" ||
+                        proyecto.dataset.categoria === categoria) {
+                        proyecto.style.display = "block";
+                    } else {
+                        proyecto.style.display = "none";
+                    }
+
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>

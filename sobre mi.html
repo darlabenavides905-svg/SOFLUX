@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">SOFLUX</a>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="trabajos.html">TRABAJOS</a>
+            <a href="sobre-mi.html" class="active">SOBRE MÍ</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- Sección principal Sobre Mí -->
+    <main class="about-section">
+        <!-- Columna izquierda: Tarjeta visual con logo -->
+        <div class="about-visual-card">
+            <div class="visual-top">
+                <!-- Reemplaza el src con la ruta de tu imagen/logo real -->
+                <img src="logo-sofi.png" alt="Logo Sofi" class="sofi-graphic" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- Respaldo tipográfico si aún no cargas la imagen -->
+                <span class="sofi-fallback" style="display:none;">SOFLUX</span>
+            </div>
+            <div class="visual-bottom-bar">
+                <span>SOFLUX</span>
+            </div>
+        </div>
+
+        <!-- Columna derecha: Texto y botones de acción -->
+        <div class="about-content">
+            <p class="subtitle">SOBRE MÍ</p>
+            <h1 class="about-title">DISEÑO QUE<br>FLUYE</h1>
+            
+            <p class="about-text">
+                Soy diseñadora gráfica y creo identidades, carteles y publicaciones con personalidad. Me encanta la tipografía pesada, los colores con intención y las formas que se sienten hechas a mano.
+            </p>
+            
+            <p class="about-text">
+                Soflux nace de unir “Sofi” y “flux”: el diseño como algo vivo que se adapta a cada marca.
+            </p>
+
+            <!-- Botones funcionales con enlaces -->
+            <div class="about-actions">
+                <a href="contacto.html" class="btn-primary-shadow">
+                    TRABAJEMOS JUNTOS <span class="arrow">&rarr;</span>
+                </a>
+                <a href="trabajos.html" class="btn-outline">
+                    VER TRABAJOS
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Sección de Habilidades -->
+    <section class="skills-section">
+        <div class="skills-container">
+            <!-- Columna izquierda: Título y herramientas -->
+            <div class="skills-info">
+                <h2 class="skills-title">HABILIDADES</h2>
+                <p class="skills-tools">
+                    Herramientas: Illustrator, InDesign, Photoshop, Figma<br>
+                    y mucho papel.
+                </p>
+            </div>
+
+            <!-- Columna derecha: Barras de progreso -->
+            <div class="skills-list">
+                <!-- Habilidad 1 -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">IDENTIDAD VISUAL</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <!-- Habilidad 2 -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">TIPOGRAFÍA</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <!-- Habilidad 3 -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">DISEÑO EDITORIAL</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <!-- Habilidad 4 -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">ILUSTRACIÓN</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <!-- Habilidad 5 -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">UI / UX</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección interactiva: Mi Proceso -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="process-heading">MI PROCESO</h2>
+
+            <div class="process-layout">
+                <!-- Columna izquierda: Botones de pasos -->
+                <div class="process-tabs" role="tablist">
+                    <button class="process-tab active" data-step="0" role="tab" aria-selected="true">
+                        <span class="tab-num">01</span> ESCUCHAR
+                    </button>
+                    <button class="process-tab" data-step="1" role="tab" aria-selected="false">
+                        <span class="tab-num">02</span> EXPLORAR
+                    </button>
+                    <button class="process-tab" data-step="2" role="tab" aria-selected="false">
+                        <span class="tab-num">03</span> DISEÑAR
+                    </button>
+                    <button class="process-tab" data-step="3" role="tab" aria-selected="false">
+                        <span class="tab-num">04</span> ENTREGAR
+                    </button>
+                </div>
+
+                <script>
+        const processSteps = [
+            {
+                num: "01",
+                title: "ESCUCHAR",
+                desc: "Conversamos sobre tu marca, tu público y lo que quieres lograr."
+            },
+            {
+                num: "02",
+                title: "EXPLORAR",
+                desc: "Investigación, referencias y bocetos de varias rutas creativas."
+            },
+            {
+                num: "03",
+                title: "DISEÑAR",
+                desc: "Desarrollo la propuesta elegida con detalle y la ajustamos juntos."
+            },
+            {
+                num: "04",
+                title: "ENTREGAR",
+                desc: "Preparo los archivos finales listos para imprimir o publicar."
+            }
+        ];
+
+        const tabs = document.querySelectorAll('.process-tab');
+        const numEl = document.getElementById('process-num');
+        const titleEl = document.getElementById('process-title');
+        const descEl = document.getElementById('process-desc');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Quitar estado activo de todos los botones
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+
+                // Activar el botón presionado
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                // Actualizar contenido del panel derecho
+                const stepIndex = tab.getAttribute('data-step');
+                const data = processSteps[stepIndex];
+
+                numEl.textContent = data.num;
+                titleEl.textContent = data.title;
+                descEl.textContent = data.desc;
+            });
+        });
+    </script>
+
+                <!-- Columna derecha: Panel de detalle -->
+                <div class="process-panel">
+                    <div class="process-big-number" id="process-num">01</div>
+                    <h3 class="process-step-title" id="process-title">ESCUCHAR</h3>
+                    <p class="process-step-desc" id="process-desc">
+                        Conversamos sobre tu marca, tu público y lo que quieres lograr.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    </script>
+
+    <!-- Sección interactiva: Trayectoria -->
+    <section class="experience-section">
+        <div class="experience-container">
+            <h2 class="experience-heading">TRAYECTORIA</h2>
+
+            <div class="experience-list">
+                <!-- Fila 1 -->
+                <div class="experience-item">
+                    <span class="exp-date">2024 — hoy</span>
+                    <h3 class="exp-role">DISEÑADORA INDEPENDIENTE</h3>
+                    <span class="exp-place">Soflux Studio</span>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="experience-item">
+                    <span class="exp-date">2021 — 2024</span>
+                    <h3 class="exp-role">DISEÑADORA SÉNIOR</h3>
+                    <span class="exp-place">Estudio Norte</span>
+                </div>
+
+                <!-- Fila 3 -->
+                <div class="experience-item">
+                    <span class="exp-date">2019 — 2021</span>
+                    <h3 class="exp-role">DISEÑADORA JUNIOR</h3>
+                    <span class="exp-place">Agencia Cielo</span>
+                </div>
+
+                <!-- Fila 4 -->
+                <div class="experience-item">
+                    <span class="exp-date">2015 — 2019</span>
+                    <h3 class="exp-role">LICENCIATURA EN DISEÑO GRÁFICO</h3>
+                    <span class="exp-place">Universidad de las Artes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <!-- LOGOTIPO Y DESCRIPCIÓN -->
+        <div class="footer-marca">
+            <h2>SOFI LUX</h2>
+
+            <p>
+                Diseño gráfico, identidad y editorial
+                con carácter. Disponible para nuevos proyectos.
+            </p>
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-columna">
+            <h3>NAVEGAR</h3>
+
+            <a href="#trabajos">Trabajos</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna">
+            <h3>REDES</h3>
+
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.behance.net/">Behance</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+
+    </div>
+
+
+    <!-- TEXTO GIGANTE -->
+    <div class="footer-gigante">
+        SOFLUX
+    </div>
+
+
+    <!-- DERECHOS DE AUTOR -->
+    <div class="footer-final">
+
+        <span>© 2026 Sofi Lux</span>
+
+        <span>Hecho con cariño</span>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

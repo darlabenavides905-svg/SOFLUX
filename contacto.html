@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">SOFLUX</a>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="trabajos.html">TRABAJOS</a>
+            <a href="sobre mi.html">SOBRE MÍ</a>
+            <a href="contacto.html" class="active">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <main class="contact-section">
+        <div class="contact-container">
+            
+            <!-- Columna Izquierda: Información -->
+            <div class="contact-info-col">
+                <p class="subtitle">CONTACTO</p>
+                <h1 class="contact-title">HABLEMOS</h1>
+                <p class="contact-desc">
+                    Cuéntame sobre tu proyecto. Respondo cada mensaje en un plazo de 48 horas.
+                </p>
+
+                <!-- Tarjetas de info interactivas -->
+                <div class="contact-cards">
+                    <a href="mailto:hola@soflux.studio" class="info-card info-card-blue">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>HOLA@SOFLUX.STUDIO</span>
+                    </a>
+
+                    <div class="info-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>IMBABURA; REMOTO</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario con sombra deslocada de tarjeta -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="#" method="POST">
+                    
+                    <!-- Fila Nombre y Correo -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">NOMBRE</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">CORREO</label>
+                            <input type="email" id="correo" required>
+                        </div>
+                    </div>
+
+                    <!-- Tipo de Proyecto -->
+                    <div class="form-group">
+                        <label>TIPO DE PROYECTO</label>
+                        <div class="tag-group" id="project-types">
+                            <button type="button" class="form-tag active">BRANDING</button>
+                            <button type="button" class="form-tag">EDITORIAL</button>
+                            <button type="button" class="form-tag">PACKAGING</button>
+                            <button type="button" class="form-tag">ILUSTRACIÓN</button>
+                            <button type="button" class="form-tag">DIGITAL</button>
+                            <button type="button" class="form-tag">OTRO</button>
+                        </div>
+                    </div>
+
+                    <!-- Presupuesto -->
+                    <div class="form-group">
+                        <label>PRESUPUESTO (OPCIONAL)</label>
+                        <div class="tag-group" id="budget-types">
+                            <button type="button" class="form-tag">; $500</button>
+                            <button type="button" class="form-tag">$500; $1.500</button>
+                            <button type="button" class="form-tag">$1.500 ; $5.000</button>
+                            <button type="button" class="form-tag">; $5.000</button>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">MENSAJE</label>
+                        <textarea id="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <button type="submit" class="btn-submit">
+                        ENVIAR MENSAJE 
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+</html>

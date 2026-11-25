@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+
+   
+    <header class="navbar">
+        <a href="#" class="logo">SOFLUX</a>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="trabajos.html" class="active">TRABAJOS</a>
+            <a href="sobre mi.html">SOBRE MÍ</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main class="portfolio-header">
+        <p class="subtitle">PORTAFOLIO &bull; 6 PROYECTOS</p>
+
+        <div class="title-search-row">
+            <h1 class="main-title">TRABAJOS</h1>
+
+            <div class="search-box">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Buscar por nombre, cliente...">
+            </div>
+        </div>
+
+    <section class="portafolio">
+
+        <!-- Categorías -->
+        <div class="categorias">
+
+            <button class="filtro activo" data-categoria="todos">TODOS 6</button>
+            <button class="filtro" data-categoria="branding">Portada de Libros</button>
+            <button class="filtro" data-categoria="cartel">Afiches</button>
+            <button class="filtro" data-categoria="packaging">Marcas</button>
+            <button class="filtro" data-categoria="editorial">Targeta de resetacion</button>
+            <button class="filtro" data-categoria="digital">infografia</button>
+            
+
+        </div>
+
+        <div class="proyectos">
+
+            <div class="proyecto" data-categoria="branding">
+                <div class="imagen">
+                    <img src="Portada de libro enchufe.png" alt="Proyecto de branding" width="100px"height="150px">
+                    <span class="etiqueta">Portada de Libros </span>
+                    <a href="Portada de Libros" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>01</span>
+                        <h2>Portada de libros</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            
+            <div class="proyecto" data-categoria="cartel">
+                <div class="imagen">
+                    <img src="afiche.jpeg" alt="Proyecto de cartel"width="100px"height="150px">
+                    <span class="etiqueta">Afiches</span>
+                    <a href="Afiches" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>02</span>
+                        <h2>Afiches</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+            
+            <div class="proyecto" data-categoria="packaging">
+                <div class="imagen">
+                    <img src="Odaria.png" alt="Proyecto de packaging"width="170px"height="170px">
+                    <span class="etiqueta">PACKAGING</span>
+                    <a href="marcas" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>03</span>
+                        <h2>Marcas</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+
+            <div class="proyecto" data-categoria="editorial">
+                <div class="imagen">
+                    <img src="Tarjeta de presentacion.png" alt="Proyecto editorial"width="150px"height="100px">
+                    <span class="etiqueta">Targetas de presentacion</span>
+                    <a href="Targetas de presentacion" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>04</span>
+                        <h2>Tarjeta</h2>
+                    </div>
+                    <span class="anio">2024</span>
+                </div>
+            </div>
+
+            
+            <div class="proyecto" data-categoria="digital">
+                <div class="imagen">
+                    <img src="INFOGRAFÍA .jpg (1).jpeg" alt="Proyecto digital"width="150px"height="250px">
+                    <span class="etiqueta">infografia</span>
+                    <a href="#" class="flecha">↗</a>
+                </div>
+
+                <div class="informacion">
+                    <div class="titulo">
+                        <span>05</span>
+                        <h2>infografia</h2>
+                    </div>
+                    <span class="anio">2025</span>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Filtro de categorías -->
+    <script>
+        const botones = document.querySelectorAll(".filtro");
+        const proyectos = document.querySelectorAll(".proyecto");
+
+        botones.forEach(boton => {
+            boton.addEventListener("click", function() {
+
+                botones.forEach(b => b.classList.remove("activo"));
+                this.classList.add("activo");
+
+                const categoria = this.dataset.categoria;
+
+                proyectos.forEach(proyecto => {
+
+                    if (categoria === "todos" ||
+                        proyecto.dataset.categoria === categoria) {
+                        proyecto.style.display = "block";
+                    } else {
+                        proyecto.style.display = "none";
+                    }
+
+                });
+            });
+        });
+    </script>
+        <!-- Sección o contenedor del botón Hablemos -->
+    <div class="cta-banner-section">
+        <a href="contacto.html" class="btn-hablemos">
+            HABLEMOS &rarr;
+        </a>
+        
+    </div>
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <!-- LOGOTIPO Y DESCRIPCIÓN -->
+        <div class="footer-marca">
+            <h2>SOFI LUX</h2>
+
+            <p>
+                Diseño gráfico, identidad y editorial
+                con carácter. Disponible para nuevos proyectos.
+            </p>
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-columna">
+            <h3>NAVEGAR</h3>
+
+            <a href="#trabajos">Trabajos</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna">
+            <h3>REDES</h3>
+
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.behance.net/">Behance</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+
+    </div>
+
+
+    <!-- TEXTO GIGANTE -->
+    <div class="footer-gigante">
+        SOFLUX
+    </div>
+
+
+    <!-- DERECHOS DE AUTOR -->
+    <div class="footer-final">
+
+        <span>© 2026 Sofi Lux</span>
+
+        <span>Hecho con cariño</span>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
